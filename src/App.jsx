@@ -6,7 +6,7 @@ import HostLayout from './components/HostLayout'
 
 function App() {
   return (
-    <div className="bg-black min-h-screen">
+    <div>
     <Routes>
       <Route element={<HostLayout />}>
       <Route index element={<Home />} />
