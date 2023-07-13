@@ -9,6 +9,10 @@
 # Overview of the Project
 This is the updated version of my portfolio made with React using Tailwind CSS for styling.
 
+## Screenshot
+
+![](./src/images/screenshot.png)
+
 ## Technologies I Used
 * React.
 * Tailwind CSS.
