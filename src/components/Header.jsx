@@ -13,7 +13,7 @@ export default function Header() {
             className={({ isActive }) =>
               isActive
                 ? "decoration-4 underline underline-offset-8 decoration-orange-500"
-                : "mr-12 hover:text-orange-500"
+                : "mr-12 hover:text-orange-500 max-s:mr-6"
             }
           >
             Home
@@ -23,7 +23,7 @@ export default function Header() {
             className={({ isActive }) =>
               isActive
                 ? "decoration-4 underline underline-offset-8 decoration-orange-500"
-                : "ml-12 hover:text-orange-500 max-sm:ml-6"
+                : "ml-12 hover:text-orange-500 max-s:ml-6"
             }
           >
             Projects
