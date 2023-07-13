@@ -44,7 +44,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <img className="w-96 max-md:order-first max-md:mb-12 max-mdp:mb-12 max-mdp:order-first max-sm:w-60 max-lg:w-72" src={AvatarImg} />
+        <img className="w-96 max-md:order-first max-md:mb-12 max-mdp:mb-12 max-mdp:order-first max-sm:w-60 max-lg:w-72 max-xl:w-80" src={AvatarImg} />
       </section>
       
       <div className="mx-2">
@@ -69,7 +69,7 @@ export default function Home() {
       </div>
       <section className="mb-24 mt-48">
         <h2 className="text-white mb-16 text-6xl text-center tracking-wide max-sm:text-4xl">Technolgies I Use</h2>
-        <div className="text-white flex justify-center flex-wrap gap-8">
+        <div className="text-white flex justify-center flex-wrap gap-8 max-sm:mx-3">
         <p className="text-center text-xl mr-8"><img className="hover:animate-spin mb-6 max-sm:w-20" src={html} alt="" />Html</p>
         <p className="text-center text-xl mr-8"><img className="hover:animate-spin mb-6 max-sm:w-20" src={css} alt="" />CSS</p>
         <p className="text-center text-xl mr-8"><img className="hover:animate-spin mb-6 max-sm:w-20" src={javaScript} alt="" />JavaScript</p>
