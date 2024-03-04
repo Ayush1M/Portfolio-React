@@ -116,14 +116,12 @@ export default function Projects() {
 
         <div className="border-2 border-orange-500 rounded-lg bg-black grid grid-cols-1">
           <img
-            className="rounded-t-lg h-60 w-screen object-cover object-top"
+            className="rounded-t-lg h-60 w-screen object-contain object-top"
             src={project4}
             alt=""
           />
           <p className="text-white text-2xl mt-6 mx-4">
-            Twimba is an Application that lets you add your own thoughts in the
-            form of tweets and also lets you like, delete and even reply to a
-            particular tweet.
+            Restaurant ordering app made with the concepts of JavaScript consist of adding and deleting items from the cart, cart functionality, payment container, and payment form.
           </p>
           <p className="flex items-center text-xl text-orange-500 ml-4 mt-8 max-s:text-lg">
             Made with :{" "}
@@ -134,7 +132,7 @@ export default function Projects() {
           <div className="flex items-center ml-4 mt-10 mb-6 max-s:flex-col">
             <a
               className="bg-orange-500 text-black px-16 py-4 rounded-lg w-1/5 flex items-center justify-center text-2xl mr-6 relative z-10 before:absolute before:inset-0 before:bg-black before:-z-10 before:border-2 before:border-orange-500 before:border-solid before:rounded-lg before:origin-left before:scale-x-0 before:transition-transform before:hover:scale-x-100 hover:text-orange-500 max-s:mr-0 max-s:mb-4 max-s:text-xl max-s:px-12 max-s:py-2"
-              href="https://twimba-app-ayush.netlify.app/"
+              href="https://ayushm-restaurant-ordering-app.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -143,7 +141,7 @@ export default function Projects() {
 
             <a
               className="bg-orange-500 text-black px-16 py-4 rounded-lg w-1/5 flex items-center justify-center text-2xl relative z-10 before:absolute before:inset-0 before:bg-black before:-z-10 before:border-2 before:border-orange-500 before:border-solid before:rounded-lg before:origin-left before:scale-x-0 before:transition-transform before:hover:scale-x-100 hover:text-orange-500 max-s:text-xl max-s:px-12 max-s:py-2"
-              href="https://github.com/Ayush1M/Twimba"
+              href="https://github.com/Ayush1M/Restaurant-ordering-app"
               target="_blank"
               rel="noopener noreferrer"
             >

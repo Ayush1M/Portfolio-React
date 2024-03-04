@@ -16,7 +16,6 @@ import github from "../images/icons/github-icon.png";
 import figma from "../images/icons/figma-icon.png";
 import vscode from "../images/icons/vscode-icon.png";
 import firebase from "../images/icons/firebase-icon.png";
-import responsivedesign from "../images/icons/responsivedesign-icon.png";
 
 export default function Home() {
   return (
@@ -76,9 +75,9 @@ export default function Home() {
             <img
               src={efficiencyimg}
               alt="Efficiency"
-              class="m-auto w-44 mb-8 max-sm:w-32"
+              className="m-auto w-44 mb-8 max-sm:w-32"
             />
-            <p class="w-[60%] m-auto max-lg:w-full max-sm:text-2xl">
+            <p className="w-[60%] m-auto max-lg:w-full max-sm:text-2xl">
               I believe having a proper planning and a end goal helps in
               achieving task more efficiently and takes less amout of time.
             </p>
@@ -90,9 +89,9 @@ export default function Home() {
             <img
               src={goalsimg}
               alt="goal Orientation"
-              class="m-auto w-44 mb-8 max-sm:w-32"
+              className="m-auto w-44 mb-8 max-sm:w-32"
             />
-            <p class="w-[60%] m-auto max-lg:w-full max-sm:text-2xl">
+            <p className="w-[60%] m-auto max-lg:w-full max-sm:text-2xl">
               I always try to break bigger goals into smaller tasks which makes
               it easy to achieve them.
             </p>
@@ -102,9 +101,9 @@ export default function Home() {
             <img
               src={flexibilityimg}
               alt="flexibility"
-              class="m-auto w-44 mb-8 max-sm:w-32"
+              className="m-auto w-44 mb-8 max-sm:w-32"
             />
-            <p class="w-[60%] m-auto max-lg:w-full max-sm:text-2xl">
+            <p className="w-[60%] m-auto max-lg:w-full max-sm:text-2xl">
               I am flexible in working in any environment wheather its in a team
               or as a individual.
             </p>
@@ -195,14 +194,6 @@ export default function Home() {
               alt=""
             />
             Firebase
-          </p>
-          <p className="text-xl">
-            <img
-              className="m-auto w-28 hover:animate-spin mb-2 max-sm:w-20"
-              src={responsivedesign}
-              alt=""
-            />
-            Responsive Design
           </p>
         </div>
       </section>
