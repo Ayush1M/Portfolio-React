@@ -4,6 +4,7 @@ import project2 from "../projects/project-image-2.png";
 import project3 from "../projects/project-image-3.png";
 import project4 from "../projects/project-image-4.png";
 import project5 from "../projects/project-image-5.png";
+import project6 from "../projects/project-image-6.png";
 import react from "../images/icons/react-icon.png";
 import css from "../images/icons/css-icon.png";
 import html from "../images/icons/html-icon.png";
@@ -180,6 +181,43 @@ export default function Projects() {
             <a
               className="bg-orange-500 text-black px-16 py-4 rounded-lg w-1/5 flex items-center justify-center text-2xl relative z-10 before:absolute before:inset-0 before:bg-black before:-z-10 before:border-2 before:border-orange-500 before:border-solid before:rounded-lg before:origin-left before:scale-x-0 before:transition-transform before:hover:scale-x-100 hover:text-orange-500 max-s:text-xl max-s:px-12 max-s:py-2"
               href="https://github.com/Ayush1M/Momentum-Dashboard-for-Chrome"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Github
+            </a>
+          </div>
+        </div>
+
+        <div className="border-2 border-orange-500 rounded-lg bg-black grid grid-cols-1">
+          <img
+            className="rounded-t-lg h-60 w-screen object-contain"
+            src={project6}
+            alt=""
+          />
+          <p className="text-white text-2xl mt-2 mx-4">
+            Color scheme generator generates a color palette of a particular color of your choosing. You can also clip a particular color hex code to use it in your projects.
+          </p>
+          <p className="flex items-center text-xl text-orange-500 ml-4 mt-8 max-s:text-lg">
+            Made with :{" "}
+            <img className="w-12 ml-4 max-s:w-8" src={html} alt="" />
+            <img className="w-12 max-s:w-8" src={css} alt="" />
+            <img className="w-12 max-s:w-8" src={javaScript} alt="" />
+            <img className="w-10 max-s:w-8" src={api} alt="" />
+          </p>
+          <div className="flex items-center ml-4 mt-10 mb-6 max-s:flex-col">
+            <a
+              className="bg-orange-500 text-black px-16 py-4 rounded-lg w-1/5 flex items-center justify-center text-2xl mr-6 relative z-10 before:absolute before:inset-0 before:bg-black before:-z-10 before:border-2 before:border-orange-500 before:border-solid before:rounded-lg before:origin-left before:scale-x-0 before:transition-transform before:hover:scale-x-100 hover:text-orange-500 max-s:mr-0 max-s:mb-4 max-s:text-xl max-s:px-12 max-s:py-2"
+              href="https://ayush-color-scheme-generator.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Live
+            </a>
+
+            <a
+              className="bg-orange-500 text-black px-16 py-4 rounded-lg w-1/5 flex items-center justify-center text-2xl relative z-10 before:absolute before:inset-0 before:bg-black before:-z-10 before:border-2 before:border-orange-500 before:border-solid before:rounded-lg before:origin-left before:scale-x-0 before:transition-transform before:hover:scale-x-100 hover:text-orange-500 max-s:text-xl max-s:px-12 max-s:py-2"
+              href="https://github.com/Ayush1M/color-scheme-generator"
               target="_blank"
               rel="noopener noreferrer"
             >
