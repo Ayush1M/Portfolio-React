@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import AvatarImg from "../images/my-image.jpg";
 import Typewriter from "typewriter-effect";
 import { DiGithubBadge } from "react-icons/di";
 import { FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import efficiencyimg from "../images/efficiency.png";
 import goalsimg from "../images/goals.png";
 import flexibilityimg from "../images/flexibility.png";
 import html from "../images/icons/html-icon.png";
 import css from "../images/icons/css-icon.png";
 import javaScript from "../images/icons/javascript-icon.png";
+import typescript from "../images/icons/typescript-icon.png";
 import react from "../images/icons/react-icon.png";
 import tailwind from "../images/icons/tailwindcss-icon.png";
 import api from "../images/icons/restapi-icon.png";
@@ -18,9 +20,32 @@ import vscode from "../images/icons/vscode-icon.png";
 import firebase from "../images/icons/firebase-icon.png";
 
 export default function Home() {
+  const [hover, setHover] = useState(false)
+  const [copyText, setCopyText] = useState("ayush.97mahajan@gmail.com")
+
+  const onHover = () => {
+    setHover(true)
+  }
+
+  const onHoverOver = () => {
+    setHover(false)
+  }
+
+  const handleClick = (e) => {
+    setCopyText(copyText)
+    console.log(copyText);
+    navigator.clipboard.writeText(copyText)
+
+    const copyEmail = document.createElement("div")
+    copyEmail.classList.add("py-1","px-4", "absolute", "-mt-28", "bg-orange-500", "text-black", "transition", "ease-in", "duration-700", "rounded-lg")
+    copyEmail.textContent = "copied"
+    e.target.appendChild(copyEmail)
+    setTimeout(()=> e.target.removeChild(copyEmail), 1000)
+  }
+  
   return (
     <>
-      <section className="text-white flex justify-evenly mt-24 max-md:flex max-md:flex-col max-md:items-center max-mdp:flex-col max-mdp:items-center">
+      <section className="text-white flex justify-evenly mt-24 max-md:flex max-md:flex-col max-md:items-center max-mdp:flex-col max-mdp:items-center border-2 border-orange-500 py-20 w-11/12 m-auto rounded-xl">
         <div>
           <div className="tracking-wider">
             <h1 className="text-5xl max-sm:text-3xl">Hi, I'm Ayush Mahajan</h1>
@@ -36,26 +61,37 @@ export default function Home() {
                 />
               </div>
             </div>
+
             <div className="flex items-center mt-16 max-md:mb-12 max-sm:flex-col">
               <a
-                className="bg-orange-500 text-black px-16 py-4 rounded-lg flex items-center text-2xl mr-6 relative z-10 before:absolute before:inset-0 before:bg-black before:-z-10 before:border-2 before:border-orange-500 before:border-solid before:rounded-lg before:origin-left before:scale-x-0 before:transition-transform before:hover:scale-x-100 hover:text-orange-500 max-sm:mb-8 max-sm:mr-0 max-sm:text-xl max-sm:px-10"
+                className="bg-orange-500 text-black rounded-lg px-4 py-4 mr-6 relative z-10 before:absolute before:inset-0 before:bg-black before:-z-10 before:border-2 before:border-orange-500 before:border-solid before:rounded-lg before:origin-left before:scale-x-0 before:transition-transform before:hover:scale-x-100 hover:text-orange-500 max-sm:mb-8 max-sm:mr-0 max-sm:text-xl max-sm:px-10 hover:scale-125"
                 href="https://github.com/Ayush1M"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                <DiGithubBadge className="text-4xl mr-2" />
-                Github
+                >
+                <DiGithubBadge className="text-5xl mr-2"/>  
               </a>
 
               <a
-                className="bg-orange-500 text-black px-16 py-4 rounded-lg flex items-center text-2xl mr-6 relative z-10 before:absolute before:inset-0 before:bg-black before:-z-10 before:border-2 before:border-orange-500 before:border-solid before:rounded-lg before:origin-left before:scale-x-0 before:transition-transform before:hover:scale-x-100 hover:text-orange-500 max-sm:mr-0 max-sm:text-xl max-sm:px-8"
+                className="bg-orange-500 text-black rounded-lg px-4 py-4 mr-6 relative z-10 before:absolute before:inset-0 before:bg-black before:-z-10 before:border-2 before:border-orange-500 before:border-solid before:rounded-lg before:origin-left before:scale-x-0 before:transition-transform before:hover:scale-x-100 hover:text-orange-500 max-sm:mr-0 max-sm:text-xl max-sm:px-8 max-sm:mb-8 hover:scale-125"
                 href="https://www.linkedin.com/in/ayush-mahajan10"
                 target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin className="text-4xl mr-2" />
-                Linkedin
+                rel="noopener noreferrer"               
+              >              
+                <FaLinkedin className="text-5xl mr-2" />
+               
               </a>
+
+              <p
+                className="cursor-pointer bg-orange-500 text-black rounded-lg px-4 py-4 mr-6 relative z-10 before:absolute before:inset-0 before:bg-black before:-z-10 before:border-2 before:border-orange-500 before:border-solid before:rounded-lg before:origin-left before:scale-x-0 before:transition-transform before:hover:scale-x-100 hover:text-orange-500 max-sm:mr-0 max-sm:text-xl max-sm:px-8 hover:scale-125"
+                onMouseEnter={() => onHover()}
+                onMouseLeave={() => onHoverOver()}
+                onClick={handleClick}               
+              >
+                {hover && <span className={`absolute mt-20 -ml-10 w-40 bg-orange-500 text-black px-2`}>
+                  copy email address</span>}              
+                <MdEmail className="text-5xl mr-2"/>
+              </p>
             </div>
           </div>
         </div>
@@ -119,7 +155,7 @@ export default function Home() {
             <img
               className="hover:animate-spin mb-6 max-sm:w-20"
               src={html}
-              alt=""
+              alt="html logo"
             />
             Html
           </p>
@@ -127,7 +163,7 @@ export default function Home() {
             <img
               className="hover:animate-spin mb-6 max-sm:w-20"
               src={css}
-              alt=""
+              alt="css logo"
             />
             CSS
           </p>
@@ -135,15 +171,23 @@ export default function Home() {
             <img
               className="hover:animate-spin mb-6 max-sm:w-20"
               src={javaScript}
-              alt=""
+              alt="javascript logo"
             />
             JavaScript
           </p>
           <p className="text-center text-xl mr-8">
             <img
               className="hover:animate-spin mb-6 max-sm:w-20"
+              src={typescript}
+              alt="typescript logo"
+            />
+            TypeScript
+          </p>
+          <p className="text-center text-xl mr-8">
+            <img
+              className="hover:animate-spin mb-6 max-sm:w-20"
               src={react}
-              alt=""
+              alt="react logo"
             />
             React
           </p>
@@ -151,7 +195,7 @@ export default function Home() {
             <img
               className="hover:animate-spin mb-6 max-sm:w-20"
               src={tailwind}
-              alt=""
+              alt="tailwind logo"
             />
             Tailwind CSS
           </p>
@@ -159,7 +203,7 @@ export default function Home() {
             <img
               className="hover:animate-spin mb-6 max-sm:w-20"
               src={api}
-              alt=""
+              alt="api logo"
             />
             RestAPI
           </p>
@@ -167,7 +211,7 @@ export default function Home() {
             <img
               className="hover:animate-spin mb-6 max-sm:w-20"
               src={github}
-              alt=""
+              alt="github logo"
             />
             Github
           </p>
@@ -175,7 +219,7 @@ export default function Home() {
             <img
               className="hover:animate-spin mb-6 max-sm:w-20"
               src={figma}
-              alt=""
+              alt="figma logo"
             />
             Figma
           </p>
@@ -183,7 +227,7 @@ export default function Home() {
             <img
               className="hover:animate-spin mb-6 max-sm:w-20"
               src={vscode}
-              alt=""
+              alt="vscode logo"
             />
             VSCode
           </p>
@@ -191,7 +235,7 @@ export default function Home() {
             <img
               className="hover:animate-spin mb-6 max-sm:w-20"
               src={firebase}
-              alt=""
+              alt="firebase logo"
             />
             Firebase
           </p>
