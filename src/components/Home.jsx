@@ -20,20 +20,11 @@ import vscode from "../images/icons/vscode-icon.png";
 import firebase from "../images/icons/firebase-icon.png";
 
 export default function Home() {
-  const [hover, setHover] = useState(false)
+  const [hover, setHover] = useState(null)
   const [copyText, setCopyText] = useState("ayush.97mahajan@gmail.com")
-
-  const onHover = () => {
-    setHover(true)
-  }
-
-  const onHoverOver = () => {
-    setHover(false)
-  }
 
   const handleClick = (e) => {
     setCopyText(copyText)
-    console.log(copyText);
     navigator.clipboard.writeText(copyText)
 
     const copyEmail = document.createElement("div")
@@ -41,6 +32,20 @@ export default function Home() {
     copyEmail.textContent = "copied"
     e.target.appendChild(copyEmail)
     setTimeout(()=> e.target.removeChild(copyEmail), 1000)
+  }
+
+  const handleMouseOver = (e) => {
+    switch(e.target.id) {
+      case "1" : 
+      setHover(1)
+      break
+      case "2" : 
+      setHover(2)
+      break
+      case "3" :
+      setHover(3)
+      break
+    }
   }
   
   return (
@@ -68,7 +73,11 @@ export default function Home() {
                 href="https://github.com/Ayush1M"
                 target="_blank"
                 rel="noopener noreferrer"
+                id="1"
+                onMouseEnter={handleMouseOver}
+                onMouseLeave={() => setHover(null)}
                 >
+                {hover === 1 && <span className="absolute mt-20 w-16 bg-orange-500 text-black px-2">github</span>}
                 <DiGithubBadge className="text-5xl mr-2"/>  
               </a>
 
@@ -76,19 +85,24 @@ export default function Home() {
                 className="bg-orange-500 text-black rounded-lg px-4 py-4 mr-6 relative z-10 before:absolute before:inset-0 before:bg-black before:-z-10 before:border-2 before:border-orange-500 before:border-solid before:rounded-lg before:origin-left before:scale-x-0 before:transition-transform before:hover:scale-x-100 hover:text-orange-500 max-sm:mr-0 max-sm:text-xl max-sm:px-8 max-sm:mb-8 hover:scale-125"
                 href="https://www.linkedin.com/in/ayush-mahajan10"
                 target="_blank"
-                rel="noopener noreferrer"               
-              >              
+                rel="noopener noreferrer"
+                id="2" 
+                onMouseEnter={handleMouseOver}
+                onMouseLeave={() => setHover(null)}              
+              > 
+              {hover === 2 && <span className="absolute mt-20 w-20 bg-orange-500 text-black px-2">linkedin</span>}             
                 <FaLinkedin className="text-5xl mr-2" />
                
               </a>
 
               <p
                 className="cursor-pointer bg-orange-500 text-black rounded-lg px-4 py-4 mr-6 relative z-10 before:absolute before:inset-0 before:bg-black before:-z-10 before:border-2 before:border-orange-500 before:border-solid before:rounded-lg before:origin-left before:scale-x-0 before:transition-transform before:hover:scale-x-100 hover:text-orange-500 max-sm:mr-0 max-sm:text-xl max-sm:px-8 hover:scale-125"
-                onMouseEnter={() => onHover()}
-                onMouseLeave={() => onHoverOver()}
-                onClick={handleClick}               
+                id="3"   
+                onMouseEnter={handleMouseOver}
+                onMouseLeave={() => setHover(null)}            
+                onClick={handleClick}
               >
-                {hover && <span className={`absolute mt-20 -ml-10 w-40 bg-orange-500 text-black px-2`}>
+                {hover === 3 && <span className="absolute mt-20 -ml-10 w-40 bg-orange-500 text-black px-2">
                   copy email address</span>}              
                 <MdEmail className="text-5xl mr-2"/>
               </p>
