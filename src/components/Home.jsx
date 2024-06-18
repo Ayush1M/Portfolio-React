@@ -17,6 +17,7 @@ import api from "../images/icons/restapi-icon.png";
 import github from "../images/icons/github-icon.png";
 import figma from "../images/icons/figma-icon.png";
 import vscode from "../images/icons/vscode-icon.png";
+import git from "../images/icons/git-icon.png";
 import firebase from "../images/icons/firebase-icon.png";
 
 export default function Home() {
@@ -244,6 +245,14 @@ export default function Home() {
               alt="vscode logo"
             />
             VSCode
+          </p>
+          <p className="text-center text-xl mr-8">
+            <img
+              className="hover:animate-spin mb-6 max-sm:w-20"
+              src={git}
+              alt="vscode logo"
+            />
+            Git
           </p>
           <p className="text-center text-xl mr-8">
             <img
