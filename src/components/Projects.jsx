@@ -55,6 +55,39 @@ export default function Projects() {
         </div>
 
         <div className="border-2 border-orange-500 rounded-lg bg-black grid grid-cols-1">
+          <img className="rounded-t-lg" src={project2} alt="" />
+          <p className="text-white text-2xl mt-6 mx-4">
+            Tic tac toe game made with React+Typescript and styled using Tailwind CSS is a popular two player game. The 
+            player who succeds in placing three of the either X or O in horizontal, vertical or diagonal is the winner.
+          </p>
+          <p className="flex items-center text-xl text-orange-500 ml-4 mt-8 max-s:text-lg">
+            Made with :{" "}
+            <img className="w-12 ml-4 max-s:w-8" src={react} alt="" />
+            <img className="w-12 max-s:w-8" src={typescript} alt="" />
+            <img className="w-12 max-s:w-8" src={tailwind} alt="" />
+          </p>
+          <div className="flex items-center ml-4 mt-10 mb-6 max-s:flex-col">
+            <a
+              className="bg-orange-500 text-black px-16 py-4 rounded-lg w-1/5 flex items-center justify-center text-2xl mr-6 relative z-10 before:absolute before:inset-0 before:bg-black before:-z-10 before:border-2 before:border-orange-500 before:border-solid before:rounded-lg before:origin-left before:scale-x-0 before:transition-transform before:hover:scale-x-100 hover:text-orange-500 max-s:mr-0 max-s:mb-4 max-s:text-xl max-s:px-12 max-s:py-2"
+              href="https://tic-tac-toe-game-am.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Live
+            </a>
+
+            <a
+              className="bg-orange-500 text-black px-16 py-4 rounded-lg w-1/5 flex items-center justify-center text-2xl relative z-10 before:absolute before:inset-0 before:bg-black before:-z-10 before:border-2 before:border-orange-500 before:border-solid before:rounded-lg before:origin-left before:scale-x-0 before:transition-transform before:hover:scale-x-100 hover:text-orange-500 max-s:text-xl max-s:px-12 max-s:py-2"
+              href="https://github.com/Ayush1M/tic-tac-toe-game"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Github
+            </a>
+          </div>
+        </div>
+
+        <div className="border-2 border-orange-500 rounded-lg bg-black grid grid-cols-1">
           <img className="rounded-t-lg" src={project1} alt="" />
           <p className="text-white text-2xl mt-6 mx-4">
             A fun quiz app made with React and React Router.
@@ -78,38 +111,6 @@ export default function Projects() {
             <a
               className="bg-orange-500 text-black px-16 py-4 rounded-lg w-1/5 flex items-center justify-center text-2xl relative z-10 before:absolute before:inset-0 before:bg-black before:-z-10 before:border-2 before:border-orange-500 before:border-solid before:rounded-lg before:origin-left before:scale-x-0 before:transition-transform before:hover:scale-x-100 hover:text-orange-500 max-s:text-xl max-s:px-12 max-s:py-2"
               href="https://github.com/Ayush1M/Quizzical"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Github
-            </a>
-          </div>
-        </div>
-
-        <div className="border-2 border-orange-500 rounded-lg bg-black grid grid-cols-1">
-          <img className="rounded-t-lg" src={project2} alt="" />
-          <p className="text-white text-2xl mt-6 mx-4">
-            Tenzies Game made with React. Your Objective is to roll the dice
-            till all the dice have same value.
-          </p>
-          <p className="flex items-center text-xl text-orange-500 ml-4 mt-8 max-s:text-lg">
-            Made with :{" "}
-            <img className="w-12 ml-4 max-s:w-8" src={react} alt="" />
-            <img className="w-12 max-s:w-8" src={css} alt="" />
-          </p>
-          <div className="flex items-center ml-4 mt-10 mb-6 max-s:flex-col">
-            <a
-              className="bg-orange-500 text-black px-16 py-4 rounded-lg w-1/5 flex items-center justify-center text-2xl mr-6 relative z-10 before:absolute before:inset-0 before:bg-black before:-z-10 before:border-2 before:border-orange-500 before:border-solid before:rounded-lg before:origin-left before:scale-x-0 before:transition-transform before:hover:scale-x-100 hover:text-orange-500 max-s:mr-0 max-s:mb-4 max-s:text-xl max-s:px-12 max-s:py-2"
-              href="https://tenzies-am.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Live
-            </a>
-
-            <a
-              className="bg-orange-500 text-black px-16 py-4 rounded-lg w-1/5 flex items-center justify-center text-2xl relative z-10 before:absolute before:inset-0 before:bg-black before:-z-10 before:border-2 before:border-orange-500 before:border-solid before:rounded-lg before:origin-left before:scale-x-0 before:transition-transform before:hover:scale-x-100 hover:text-orange-500 max-s:text-xl max-s:px-12 max-s:py-2"
-              href="https://github.com/Ayush1M/Tenzies-Game"
               target="_blank"
               rel="noopener noreferrer"
             >
